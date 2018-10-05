@@ -58,20 +58,20 @@ if(!empty($_POST)){
 				$sql = "INSERT INTO user (username, password, email, level)	VALUES ('".$username."', '".$_POST['password']."', '".$_POST['email']."', 'pemesan')";
 
 				if ($conn->query($sql) === TRUE) {
-					$email_to = $_POST['email'];
-					$subject = "Welcome message";
-					$message = "Congratulation, your register is successfull\n";
-					$message .= "Here is your credential :\n";
-					$message .= "username : ".$username;
-					$message .= "\npassword : ".$_POST['password'];
-					$headers = get_email_header();
+					// $email_to = $_POST['email'];
+					// $subject = "Welcome message";
+					// $message = "Congratulation, your register is successfull\n";
+					// $message .= "Here is your credential :\n";
+					// $message .= "username : ".$username;
+					// $message .= "\npassword : ".$_POST['password'];
+					// $headers = get_email_header();
 
 					// Send
-					if(mail($email_to, $subject, $message, $headers)){
-						header ("Location: index.php?dest=login");
-					}else{
+					// if(mail($email_to, $subject, $message, $headers)){
+						// header ("Location: index.php?dest=login");
+					// }else{
 					    var_dump(error_get_last()['message']);
-					}
+					// }
 				} else {
 					header ("Location: index.php");
 				}
