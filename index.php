@@ -13,7 +13,7 @@ include('constant.php');
 	<!-- style FSA -->
 	<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript">
-		var urlForJs = "<?php echo BASE_URL?>";
+		var urlForJs = "<?= BASE_URL?>";
 	</script>
 
 </head>
